@@ -1,15 +1,13 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.senai.sc.model.negocio;
 
 /**
  * classe que representa os clientes fisicos do software
+ *
  * @version 1.0 31/07/13
  * @author elivelton_sipriano
  */
 public class ClientePF extends PessoaFisica {
+
     private Double nrConta;
     private double LimiteCompra;
     private char categoria;
@@ -18,7 +16,6 @@ public class ClientePF extends PessoaFisica {
 
     public ClientePF() {
     }
-    
 
     public Double getNrConta() {
         return nrConta;
@@ -59,6 +56,4 @@ public class ClientePF extends PessoaFisica {
     public void setV1TotalGasto(double v1TotalGasto) {
         this.v1TotalGasto = v1TotalGasto;
     }
-    
-    
 }
