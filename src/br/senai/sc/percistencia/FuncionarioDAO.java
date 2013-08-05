@@ -11,30 +11,44 @@ import javax.swing.JOptionPane;
  * @version 1.0 31/07/13
  * @author elivelton_sipriano
  */
- public class FuncionarioDAO {
-    public void adicionar(Funcionario f, List<Funcionario> funcionarios ) {
+public class FuncionarioDAO {
+
+    public void adicionar(Funcionario f, List<Funcionario> funcionarios) {
         funcionarios.add(f);
         JOptionPane.showMessageDialog(null, "Funcionario " + " adicionado com sucesso.");
     }
     //metodo que lista todos os funcionarios 
-    public  void listar( List<Funcionario> funcionarios ){
-        String msg = ""; 
-        for (Funcionario f : funcionarios){
-            msg = msg+"\nNome:"+f.getNome()
-                    +"\nData de Nascimento:"+f.getDataNascimento()
-                    +"\nRg:"+f.getRg()
-                    +"\nCpf"+f.getCpf()
-                    +"\nEndereço:"+f.getEndereco()
-                    +"\nTelefone:"+f.getTelefone()
-                    +"\nData cadastro:"+f.getDataCadastro()
-                    +"\nSalario:"+f.getSalario()
-                    +"\nData admissão;"+f.getDataAmissao()
-                            +"\nCargo:"+f.getCargo();
-                   JOptionPane.showMessageDialog(null, msg);
-                   
-                    
-            
+
+    public void listar(List<Funcionario> funcionarios) {
+        String msg = "";
+        for (Funcionario f : funcionarios) {
+            msg = msg + "\nNome:" + f.getNome()
+                    + "\nData de Nascimento:" + f.getDataNascimento()
+                    + "\nRg:" + f.getRg()
+                    + "\nCpf" + f.getCpf()
+                    + "\nEndereço:" + f.getEndereco()
+                    + "\nTelefone:" + f.getTelefone()
+                    + "\nData cadastro:" + f.getDataCadastro()
+                    + "\nSalario:" + f.getSalario()
+                    + "\nData admissão;" + f.getDataAmissao()
+                    + "\nCargo:" + f.getCargo();
+            JOptionPane.showMessageDialog(null, msg);
+
+
+
         }
-        
+
+    }
+
+    public void excluir(String nome, List<Funcionario> funcionarios) {
+
+        Funcionario fRemove = null;
+        for (Funcionario f : funcionarios) {
+            if (f.getNome().equals(nome)) {
+                fRemove = f;
+            }
+
+            funcionarios.remove(fRemove);
+        }
     }
 }
