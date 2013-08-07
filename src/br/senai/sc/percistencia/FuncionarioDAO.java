@@ -48,7 +48,22 @@ public class FuncionarioDAO {
                 fRemove = f;
             }
 
-            funcionarios.remove(fRemove);
+
         }
+        funcionarios.remove(fRemove);
+    }
+
+    public void altera(String nome, List<Funcionario> funcionarios, Funcionario fAltera) {
+        excluir(nome, funcionarios);
+        adicionar(fAltera, funcionarios);
+    }
+
+    public Funcionario buscaFuncionarioByNome(String nome, List<Funcionario> funcionarios) {
+        for (Funcionario fBusca : funcionarios) {
+            if (fBusca.getNome().equals(nome)) {
+                return fBusca;
+            }
+        }
+        return null;
     }
 }
