@@ -6,7 +6,7 @@ package br.senai.sc.model.negocio;
  * @version 1.0 31/07/13
  * @author elivelton_sipriano
  */
-public class Pessoa {
+public abstract class Pessoa {
     
   private  int id;
    private String endereco;

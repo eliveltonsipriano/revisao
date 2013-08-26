@@ -53,7 +53,7 @@ public class JanelaProduto {
         Produto p = new Produto();
         p.setNome(JOptionPane.showInputDialog("Informe o nome do Produto"));
         p.setMarca(JOptionPane.showInputDialog("Informe a marca do produto"));
-
+        p.getPreco(JOptionPane.showInputDialog("Informe O preço do produto"));
         ProdutoDAO dao = new ProdutoDAO();
         dao.adicionar(p, produtos);
     }

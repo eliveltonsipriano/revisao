@@ -31,7 +31,8 @@ public class FuncionarioDAO {
                     + "\nData cadastro:" + f.getDataCadastro()
                     + "\nSalario:" + f.getSalario()
                     + "\nData admissão;" + f.getDataAmissao()
-                    + "\nCargo:" + f.getCargo();
+                    + "\nCargo:" + f.getCargo()
+                    + "\nId:" + f.getCodigo();
             JOptionPane.showMessageDialog(null, msg);
 
 

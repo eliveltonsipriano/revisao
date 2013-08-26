@@ -6,7 +6,7 @@ package br.senai.sc.model.negocio;
  * @author elivelton_sipriano
  * @version 1.0 31/07/13
  */
-public class PessoaFisica extends Pessoa {
+public abstract class PessoaFisica extends Pessoa {
 
     private String cpf;
     private String nome;

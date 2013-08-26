@@ -19,9 +19,12 @@ public class ProdutoDAO {
     public void listar(List<Produto> produtos) {
         String msg = "";
         for (Produto p : produtos) {
+
             msg = msg + "\nNome:" + p.getNome()
                     + "\nMarca:" + p.getMarca()
-                    + "\nPreço:" + p.getPreco();
+                    + "\nPreço:" + p.getPreco()
+                    + "\nId:" + p.getCodigo();
+
 
 
 
